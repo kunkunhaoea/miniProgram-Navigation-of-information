@@ -1,0 +1,11 @@
+{
+  "pages" : [
+    "pages/网站导航",
+    "pages/群导航",
+    "pages/公众号导航",
+    "pages/我的"
+  ],
+  "window" :{
+
+  }
+}
