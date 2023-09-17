@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/job/job",
+    "pages/hobby/hobby",
+    "pages/HomePage/HomePage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b2b7",
+    "selectedColor": "#75c9f5",
+    "backgroundColor": "#f1f6f9",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/首页.png",
+        "selectedIconPath": "image/首页(选中).png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/job/job",
+        "iconPath": "image/WeChat.png",
+        "selectedIconPath": "image/WeChat.png",
+        "text": "导航2"
+      },
+      {
+        "pagePath": "pages/hobby/hobby",
+        "iconPath": "image/WeChat.png",
+        "selectedIconPath": "image/WeChat.png",
+        "text": "导航3"
+      },
+      {
+        "pagePath": "pages/HomePage/HomePage",
+        "iconPath": "image/WeChat.png",
+        "selectedIconPath": "image/WeChat.png",
+        "text": "导航4"
+      }
+    ]
+  },
+  "style": "v2",
+  "renderer": "skyline",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
