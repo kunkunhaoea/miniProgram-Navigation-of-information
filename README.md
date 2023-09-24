@@ -1,1 +1,0 @@
-# miniProgram-Navigation-of-information

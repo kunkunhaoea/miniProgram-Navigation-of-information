@@ -1,0 +1,251 @@
+<!--pages/groupNavigate/groupNavigate.wxml-->
+<page-meta>
+  <navigation-bar
+    title="{{nbTitle}}"
+    background-color="{{nbBackgroundColor}}"
+    color-animation-duration="2000"
+    color-animation-timing-func="easeIn"
+  />
+</page-meta>
+<view class='productNav'>
+  <!-- 左侧 -->
+  <view class='left'>
+    <view class="{{active==0?'selected':'normal'}}" id="0" bindtap='switchNav'>求职群</view>
+    <view class="{{active==1?'selected':'normal'}}" id="1" bindtap='switchNav'>爱好群</view>
+    <view class="{{active==2?'selected':'normal'}}" id="2" bindtap='switchNav'>学习群</view>
+    <view class="{{active==3?'selected':'normal'}}" id="3" bindtap='switchNav'>问答群</view>
+    <view class="{{active==4?'selected':'normal'}}" id="4" bindtap='switchNav'>老乡群</view>
+  </view>
+  <!-- 右侧 -->
+  <view class='right'>
+    <view class='type'>
+      <!-- current:当前所在滑块的 index -->
+      <!-- vertical:滑动方向是否为纵向 -->
+      <swiper current='{{currentTab}}' vertical='{{false}}'>
+        <!-- catchtouchmove 阻止弹窗后滚动穿透 -->
+        <swiper-item id="0" catchtouchmove="false" class="scrollable-content">
+          <!--求职群-->
+          
+          <van-cell-group inset>
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述2" value="群号2" label="描述信息2" />
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述2" value="群号2" label="描述信息2" />
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述2" value="群号2" label="描述信息2" />
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述2" value="群号2" label="描述信息2" />
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述2" value="群号2" label="描述信息2" />
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述2" value="群号2" label="描述信息2" />
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述2" value="群号2" label="描述信息2" />
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述2" value="群号2" label="描述信息2" />
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述2" value="群号2" label="描述信息2" />
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述2" value="群号2" label="描述信息2" />
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述2" value="群号2" label="描述信息2" />
+              <van-cell title="描述1" value="群号1" label="描述信息1"/>
+              <van-cell title="描述6" value="群号2" label="描述信息2" />
+          </van-cell-group>
+
+        </swiper-item>
+        <swiper-item id="1" catchtouchmove="false"  class="scrollable-content">
+          <!--爱好群-->
+          <van-collapse accordion value="{{ activeName }}" bind:change="onChange">
+            <van-collapse-item title="球类" name="1">
+              <van-cell-group inset>
+              <van-cell title="网球" value="群号1" label="描述信息1"/>
+              <van-cell title="羽毛球" value="群号2" label="描述信息2" />
+              </van-cell-group>
+            </van-collapse-item>
+            <van-collapse-item title="乐器类" name="2">
+              <van-cell-group inset>
+              <van-cell title="小提琴" value="群号1" label="描述信息1"/>
+              <van-cell title="钢琴" value="群号2" label="描述信息2" />
+              </van-cell-group>
+            </van-collapse-item>
+            <van-collapse-item title="运动类" name="3">
+              <van-cell-group inset>
+              <van-cell title="跑步" value="群号1" label="描述信息1"/>
+              <van-cell title="登山" value="群号2" label="描述信息2" />
+              </van-cell-group>
+            </van-collapse-item>
+            <van-collapse-item title="棋牌类" name="4">
+              <van-cell-group inset>
+              <van-cell title="桌游" value="群号1" label="描述信息1"/>
+              <van-cell title="麻将" value="群号2" label="描述信息2" />
+              <van-cell title="桌游" value="群号1" label="描述信息1"/>
+              <van-cell title="麻将" value="群号2" label="描述信息2" />
+              <van-cell title="桌游" value="群号1" label="描述信息1"/>
+              <van-cell title="麻将" value="群号2" label="描述信息2" />
+              <van-cell title="桌游" value="群号1" label="描述信息1"/>
+              <van-cell title="麻将" value="群号2" label="描述信息2" />
+              <van-cell title="桌游" value="群号1" label="描述信息1"/>
+              <van-cell title="麻将" value="群号2" label="描述信息2" />
+              <van-cell title="桌游" value="群号1" label="描述信息1"/>
+              <van-cell title="麻将" value="群号2" label="描述信息2" />
+              </van-cell-group>
+            </van-collapse-item>
+          </van-collapse>
+         
+        </swiper-item>
+        <swiper-item id="2" catchtouchmove="false"  class="scrollable-content">
+          <view class="scrollable-content">
+          学习群放置处
+          </view>
+        </swiper-item>
+        <swiper-item id="3" catchtouchmove="false" class="scrollable-content">
+            问答群放置处
+        </swiper-item>
+        <swiper-item id="4" catchtouchmove="false"  class="scrollable-content">
+            <van-index-bar>
+          <!--A-->
+          <view>
+            <van-index-anchor index="A" />
+              <van-cell-group title="安徽" >
+                <van-cell title="蚌埠" value="内容" label="描述信息" border="{{ true }}" />
+                <van-cell title="上饶" value="内容" label="描述信息" border="{{ true }}" />
+              </van-cell-group>
+              <van-cell-group title="澳门">
+              </van-cell-group>
+          </view>
+          <!--B-->
+          <view>
+            <van-index-anchor index="B" />
+              <van-cell-group title="北京">
+              </van-cell-group>
+          </view>
+          <!--C-->
+          <view>
+            <van-index-anchor index="C" />
+              <van-cell-group title="重庆">
+              </van-cell-group>
+          </view>
+          <!--F-->
+          <view>
+            <van-index-anchor index="F" />
+              <van-cell-group title="福建">
+              </van-cell-group>
+          </view>
+          <!--G-->
+          <view>
+            <van-index-anchor index="G" />
+              <van-cell-group title="甘肃">
+              </van-cell-group>
+              <van-cell-group title="广东">
+              </van-cell-group>
+              <van-cell-group title="广西">
+              </van-cell-group>
+              <van-cell-group title="贵州">
+              </van-cell-group>
+          </view>
+          <!--H-->
+          <view>
+            <van-index-anchor index="H" />
+              <van-cell-group title="海南">
+              </van-cell-group>
+              <van-cell-group title="河南">
+              </van-cell-group>
+              <van-cell-group title="河北">
+              </van-cell-group>
+              <van-cell-group title="河南">
+              </van-cell-group>
+              <van-cell-group title="黑龙江">
+              </van-cell-group>
+              <van-cell-group title="湖北">
+              </van-cell-group>
+              <van-cell-group title="湖南">
+              </van-cell-group>
+          </view>
+          <!--J-->
+          <view>
+            <van-index-anchor index="J" />
+              <van-cell-group title="吉林">
+              </van-cell-group>
+              <van-cell-group title="江苏">
+              </van-cell-group>
+              <van-cell-group title="江西">
+              </van-cell-group>
+          </view>
+          <!--L-->
+          <view>
+            <van-index-anchor index="L" />
+              <van-cell-group title="辽宁">
+              </van-cell-group>
+          </view>
+          <!--N-->
+          <view>
+            <van-index-anchor index="N" />
+              <van-cell-group title="内蒙古">
+              </van-cell-group>
+              <van-cell-group title="宁夏">
+              </van-cell-group>
+          </view>
+          <!--Q-->
+          <view>
+            <van-index-anchor index="Q" />
+              <van-cell-group title="青海">
+              </van-cell-group>
+          </view>
+          <!--S-->
+          <view>
+            <van-index-anchor index="S" />
+              <van-cell-group title="山东">
+              </van-cell-group>
+              <van-cell-group title="山西">
+              </van-cell-group>
+              <van-cell-group title="陕西">
+              </van-cell-group>
+              <van-cell-group title="上海">
+              </van-cell-group>
+              <van-cell-group title="四川">
+              </van-cell-group>
+          </view>
+          <!--T-->
+          <view>
+            <van-index-anchor index="T" />
+              <van-cell-group title="台湾">
+              </van-cell-group>
+              <van-cell-group title="天津">
+              </van-cell-group>
+          </view>
+          <!--X-->
+          <view>
+            <van-index-anchor index="X" />
+              <van-cell-group title="西藏">
+              </van-cell-group>
+              <van-cell-group title="香港">
+              </van-cell-group>
+              <van-cell-group title="新疆">
+              </van-cell-group>
+          </view>
+          <!--Y-->
+          <view>
+            <van-index-anchor index="Y" />
+              <van-cell-group title="云南">
+              </van-cell-group>
+          </view>
+          <!--Z-->
+          <view>
+            <van-index-anchor index="Z" />
+              <van-cell-group title="浙江">
+                <van-cell title="宁波" value="内容" label="描述信息" border="{{ true }}" />
+                <van-cell title="嘉兴" value="内容" label="描述信息" border="{{ true }}" />
+                <van-cell title="杭州" value="内容" label="描述信息" border="{{ true }}" />
+                <van-cell title="绍兴" value="内容" label="描述信息" border="{{ true }}" />
+                <van-cell title="温州" value="内容" label="描述信息" border="{{ true }}" />
+                <van-cell title="舟山" value="内容" label="描述信息" border="{{ true }}" />
+              </van-cell-group>
+          </view>
+            </van-index-bar>
+        </swiper-item>
+      </swiper> 
+  
+      </view>
+  </view>
+</view>

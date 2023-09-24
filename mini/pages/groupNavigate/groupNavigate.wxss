@@ -1,0 +1,42 @@
+/* pages/groupNavigate/groupNavigate.wxss */
+.productNav{
+  display: flex;
+  flex-direction: row;
+  font-family: "Microsoft YaHei"
+}
+.left{
+  width: 25%;
+  font-size: 30rpx;
+  background-color: #f4f4f4;
+  height: 641px; 
+  position: sticky; /* 添加sticky定位 */
+  top: 0; /* 设置左侧容器固定在顶部 */
+  overflow-y: hidden; /* 禁用垂直滚动 */
+}
+.left view{
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.selected{
+  background-color: #fff;
+  border-left: 2px solid #40457f;
+  font-weight: bold;
+  color: #75a5d6;
+}
+.normal{
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #f2f2f2;
+}
+.right{
+  width:75%;
+  margin: 0;
+}
+
+swiper{
+  min-height: 641px; 
+}
+.scrollable-content {
+  min-height: 641px; 
+  overflow-y: auto; /* 添加垂直滚动条 */
+}

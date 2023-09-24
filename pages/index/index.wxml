@@ -1,3 +1,0 @@
-<!--index.wxml-->
-<navigation-bar title="工大小灵通" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-
